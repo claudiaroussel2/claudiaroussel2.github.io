@@ -1,0 +1,13 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { projects } from "../data/projects";
+---
+
+<Base title="Claudia Roussel">
+  <Header intro />
+  <section class="projects" aria-label="Projects">
+    {projects.map((project) => <ProjectCard project={project} />)}
+  </section>
+</Base>

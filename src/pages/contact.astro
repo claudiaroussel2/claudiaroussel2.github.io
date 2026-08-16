@@ -1,0 +1,32 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+---
+
+<Base title="Get in Touch — Claudia Roussel">
+  <Header />
+  <main class="page">
+    <h1>Get in Touch</h1>
+    <p class="about-copy" style="margin-bottom: 32px">
+      Placeholder. Replace the address below, or wire this form to the tool you want.
+    </p>
+    <p style="margin-bottom: 28px">
+      <a class="cta" href="mailto:hello@placeholder.com">hello@placeholder.com</a>
+    </p>
+    <form class="contact-form" action="mailto:hello@placeholder.com" method="post" enctype="text/plain">
+      <label>
+        Name
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Message
+        <textarea name="message" required></textarea>
+      </label>
+      <button class="cta" type="submit">Get in Touch</button>
+    </form>
+  </main>
+</Base>

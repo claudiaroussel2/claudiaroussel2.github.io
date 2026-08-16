@@ -1,0 +1,24 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import { services } from "../data/services";
+---
+
+<Base title="Services — Claudia Roussel">
+  <Header />
+  <main class="page">
+    <h1>Services</h1>
+    {
+      services.map((service) => (
+        <article class="service">
+          <span class="service-num">{service.number}</span>
+          <div>
+            <h2>{service.title}</h2>
+            <p>{service.body}</p>
+          </div>
+          <a class="cta" href="/contact">Get in Touch</a>
+        </article>
+      ))
+    }
+  </main>
+</Base>

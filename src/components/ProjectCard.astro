@@ -1,0 +1,18 @@
+---
+import type { Project } from "../data/projects";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const src = `/images/projects/${project.slug}.jpg`;
+---
+
+<article class="project">
+  <p class="project-label">• {project.name}</p>
+  <div
+    class="shot"
+    style={`width:${project.width}px;height:${project.height}px;background-color:${project.color};background-image:url('${src}')`}
+  ></div>
+</article>
